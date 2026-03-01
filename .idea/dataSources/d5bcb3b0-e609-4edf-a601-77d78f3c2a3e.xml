@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@test.a2y5cje.mongodb.net">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.53">
+    <root id="1">
+      <ServerVersion>8.0.19</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="admin"/>
+    <schema id="3" parent="1" name="bd1290"/>
+    <schema id="4" parent="1" name="dbMeteo"/>
+    <schema id="5" parent="1" name="db_TP"/>
+    <schema id="6" parent="1" name="demo1290"/>
+    <schema id="7" parent="1" name="local"/>
+    <schema id="8" parent="1" name="mongodbVSCodePlaygroundDB"/>
+    <schema id="9" parent="1" name="sample_mflix"/>
+    <schema id="10" parent="1" name="test">
+      <Current>1</Current>
+      <LastIntrospectionLocalTimestamp>2026-02-09.19:45:50</LastIntrospectionLocalTimestamp>
+    </schema>
+    <schema id="11" parent="1" name="test2"/>
+    <table id="12" parent="10" name="bibliotheque"/>
+    <table id="13" parent="10" name="bibliotheques"/>
+    <table id="14" parent="10" name="conseillers"/>
+    <table id="15" parent="10" name="datas"/>
+    <table id="16" parent="10" name="demo"/>
+    <table id="17" parent="10" name="infoMeteo"/>
+    <table id="18" parent="10" name="inventory"/>
+    <table id="19" parent="10" name="inventory2"/>
+    <table id="20" parent="10" name="postalcodes"/>
+    <table id="21" parent="10" name="produits"/>
+    <table id="22" parent="10" name="profs"/>
+    <table id="23" parent="10" name="restaurant"/>
+    <table id="24" parent="10" name="sales"/>
+    <table id="25" parent="10" name="subscribers"/>
+    <table id="26" parent="10" name="ventes"/>
+    <column id="27" parent="12" name="_id">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="28" parent="12" name="authors">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="29" parent="12" name="pages">
+      <Position>1</Position>
+      <StoredType>Object|4999544s</StoredType>
+    </column>
+    <column id="30" parent="12" name="title">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="31" parent="12" name="booktitle">
+      <Position>2</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="32" parent="12" name="pages.end">
+      <Position>2</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="33" parent="12" name="type">
+      <Position>2</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="34" parent="12" name="pages.start">
+      <Position>3</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="35" parent="12" name="url">
+      <Position>3</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="36" parent="12" name="year">
+      <Position>4</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <index id="37" parent="12" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="38" parent="15" name="_id">
+      <Position>1</Position>
+      <StoredType>ObjectId|12s</StoredType>
+    </column>
+    <column id="39" parent="15" name="__v">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="40" parent="15" name="age">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="41" parent="15" name="job">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="42" parent="15" name="name">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <index id="43" parent="15" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="44" parent="16" name="_id">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="45" parent="16" name="city">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="46" parent="16" name="qty">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <index id="47" parent="16" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="48" parent="17" name="_id">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="49" parent="17" name="date">
+      <Position>1</Position>
+      <StoredType>ISODate|91s</StoredType>
+    </column>
+    <column id="50" parent="17" name="qtPluie">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="51" parent="17" name="tauxHumid">
+      <Position>1</Position>
+      <StoredType>Double|8s</StoredType>
+    </column>
+    <column id="52" parent="17" name="temperature">
+      <Position>2</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <index id="53" parent="17" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="54" parent="18" name="_id">
+      <Position>1</Position>
+      <StoredType>ObjectId|12s</StoredType>
+    </column>
+    <column id="55" parent="18" name="item">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="56" parent="18" name="qty">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="57" parent="18" name="size">
+      <Position>1</Position>
+      <StoredType>Object|4999544s</StoredType>
+    </column>
+    <column id="58" parent="18" name="size.h">
+      <Position>2</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="59" parent="18" name="size.uom">
+      <Position>3</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="60" parent="18" name="size.w">
+      <Position>4</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="61" parent="18" name="status">
+      <Position>5</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <index id="62" parent="18" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="63" parent="19" name="_id">
+      <Position>1</Position>
+      <StoredType>ObjectId|12s</StoredType>
+    </column>
+    <column id="64" parent="19" name="dim_cm">
+      <Position>1</Position>
+      <StoredType>Array|2003s</StoredType>
+    </column>
+    <column id="65" parent="19" name="item">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="66" parent="19" name="qty">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="67" parent="19" name="tags">
+      <Position>1</Position>
+      <StoredType>Array|2003s</StoredType>
+    </column>
+    <index id="68" parent="19" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="69" parent="20" name="_id">
+      <Position>1</Position>
+      <StoredType>ObjectId|12s</StoredType>
+    </column>
+    <column id="70" parent="20" name="contact">
+      <Position>1</Position>
+      <StoredType>Object|4999544s</StoredType>
+    </column>
+    <column id="71" parent="20" name="id">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="72" parent="20" name="placeOfResearch">
+      <Position>1</Position>
+      <StoredType>Object|4999544s</StoredType>
+    </column>
+    <column id="73" parent="20" name="contact.email">
+      <Position>2</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="74" parent="20" name="placeOfResearch.city">
+      <Position>2</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="75" parent="20" name="placeOfResearch.name">
+      <Position>3</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="76" parent="20" name="placeOfResearch.postalcode">
+      <Position>4</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <index id="77" parent="20" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="78" parent="21" name="_id">
+      <Position>1</Position>
+      <StoredType>ObjectId|12s</StoredType>
+    </column>
+    <column id="79" parent="21" name="dateAchat">
+      <Position>1</Position>
+      <StoredType>ISODate|91s</StoredType>
+    </column>
+    <column id="80" parent="21" name="fournisseurs">
+      <Position>1</Position>
+      <StoredType>Array|2003s</StoredType>
+    </column>
+    <column id="81" parent="21" name="nom">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="82" parent="21" name="prix">
+      <Position>1</Position>
+      <StoredType>Double|8s</StoredType>
+    </column>
+    <index id="83" parent="21" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="84" parent="22" name="_id">
+      <Position>1</Position>
+      <StoredType>ObjectId|12s</StoredType>
+    </column>
+    <column id="85" parent="22" name="__v">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="86" parent="22" name="codesMatieres">
+      <Position>1</Position>
+      <StoredType>Array|2003s</StoredType>
+    </column>
+    <column id="87" parent="22" name="courriel">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="88" parent="22" name="dateCreation">
+      <Position>1</Position>
+      <StoredType>ISODate|91s</StoredType>
+    </column>
+    <column id="89" parent="22" name="ecoles">
+      <Position>1</Position>
+      <StoredType>Array|2003s</StoredType>
+    </column>
+    <column id="90" parent="22" name="nom">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="91" parent="22" name="password">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="92" parent="22" name="prenom">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <index id="93" parent="22" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="94" parent="23" name="_id">
+      <Position>1</Position>
+      <StoredType>ObjectId|12s</StoredType>
+    </column>
+    <column id="95" parent="23" name="address">
+      <Position>1</Position>
+      <StoredType>Object|4999544s</StoredType>
+    </column>
+    <column id="96" parent="23" name="borough">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="97" parent="23" name="cuisine">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="98" parent="23" name="grades">
+      <Position>1</Position>
+      <StoredType>list|4999545s</StoredType>
+    </column>
+    <column id="99" parent="23" name="name">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="100" parent="23" name="restaurant_id">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="101" parent="23" name="address.building">
+      <Position>2</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="102" parent="23" name="grades.date">
+      <Position>2</Position>
+      <StoredType>ISODate|91s</StoredType>
+    </column>
+    <column id="103" parent="23" name="address.coord">
+      <Position>3</Position>
+      <StoredType>Array|2003s</StoredType>
+    </column>
+    <column id="104" parent="23" name="grades.grade">
+      <Position>3</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="105" parent="23" name="address.street">
+      <Position>4</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="106" parent="23" name="grades.score">
+      <Position>4</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="107" parent="23" name="address.zipcode">
+      <Position>5</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <index id="108" parent="23" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="109" parent="24" name="_id">
+      <Position>1</Position>
+      <StoredType>ObjectId|12s</StoredType>
+    </column>
+    <column id="110" parent="24" name="date">
+      <Position>1</Position>
+      <StoredType>ISODate|91s</StoredType>
+    </column>
+    <column id="111" parent="24" name="item">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="112" parent="24" name="price">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="113" parent="24" name="quantity">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <index id="114" parent="24" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="115" parent="25" name="_id">
+      <Position>1</Position>
+      <StoredType>ObjectId|12s</StoredType>
+    </column>
+    <column id="116" parent="25" name="__v">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="117" parent="25" name="name">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="118" parent="25" name="subscribeDate">
+      <Position>1</Position>
+      <StoredType>ISODate|91s</StoredType>
+    </column>
+    <column id="119" parent="25" name="subscribedChannel">
+      <Position>2</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <index id="120" parent="25" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <column id="121" parent="26" name="_id">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <column id="122" parent="26" name="categorie">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="123" parent="26" name="date">
+      <Position>1</Position>
+      <StoredType>ISODate|91s</StoredType>
+    </column>
+    <column id="124" parent="26" name="prix">
+      <Position>1</Position>
+      <StoredType>Double|8s</StoredType>
+    </column>
+    <column id="125" parent="26" name="produit">
+      <Position>1</Position>
+      <StoredType>String|12s</StoredType>
+    </column>
+    <column id="126" parent="26" name="quantite">
+      <Position>1</Position>
+      <StoredType>Int32|4s</StoredType>
+    </column>
+    <index id="127" parent="26" name="_id_">
+      <ColNames>_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+  </database-model>
+</dataSource>
