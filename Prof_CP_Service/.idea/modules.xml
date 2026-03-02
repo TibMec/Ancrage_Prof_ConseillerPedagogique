@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../Client_Prof_CP/.idea/Client_Prof_CP.iml" filepath="$PROJECT_DIR$/../Client_Prof_CP/.idea/Client_Prof_CP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DAO.iml" filepath="$PROJECT_DIR$/.idea/DAO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ServiceConseiller/.idea/ServiceConseiller.iml" filepath="$PROJECT_DIR$/../ServiceConseiller/.idea/ServiceConseiller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ServiceProf/.idea/ServiceProf.iml" filepath="$PROJECT_DIR$/../ServiceProf/.idea/ServiceProf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Service_auth/.idea/Service_auth.iml" filepath="$PROJECT_DIR$/../Service_auth/.idea/Service_auth.iml" />
+    </modules>
+  </component>
+</project>

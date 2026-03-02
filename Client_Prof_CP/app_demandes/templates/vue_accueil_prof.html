@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="accueil">
+    <div class="container">
+        <div class="carte">
+            <h1>Accueil Enseignant</h1>
+            <div class="pb-4">
+                <p class="m-2">Nouvel usager ?</p>
+                <a class="bouton primary" href="/nouveau-prof">S'enregistrer</a><br>
+            </div>
+            <div class="pb-4">
+                <p class="m-2">Déjà un compte ?</p>
+                <a class="bouton secondary" href="/login-prof">Se connecter</a><br>
+            </div>
+            <a href="http://127.0.0.1:5000/">Retour accueil</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

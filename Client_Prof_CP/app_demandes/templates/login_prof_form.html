@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="section-wrapper">
+    <h1>Authentification</h1>
+    <form action="/login-prof" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.courriel.label }}<br>
+            {{ form.courriel(size=25) }}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=25) }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+{% endblock %}

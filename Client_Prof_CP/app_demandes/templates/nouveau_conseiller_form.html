@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="mt-2 d-flex justify-content-around">
+    <a href="/index">Accueil</a><br>
+    <a href="/profil-cp">Mon profil</a><br>
+    <a href="/logout">Se déconnecter</a><br>
+</div>
+<hr>
+<div class="section-wrapper">
+    <h1>Saisie des informations du conseiller pédagogique</h1>
+    <form action="/nouveau-conseiller" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.nom.label }}<br>
+            {{ form.nom(size=32) }}
+            <span class="erreur">
+            {% for error in form.nom.errors %}
+                {{ error }}
+            {% endfor %}
+        </span>
+        </p>
+        <p>
+            {{ form.prenom.label }}<br>
+            {{ form.prenom(size=32) }}
+            <span class="erreur">
+            {% for error in form.prenom.errors %}
+                {{ error }}
+            {% endfor %}
+        </span>
+        </p>
+        <p>
+            {{ form.courriel.label }}<br>
+            {{ form.courriel(size=32) }}
+            <span class="erreur">
+            {% for error in form.courriel.errors %}
+                {{ error }}
+            {% endfor %}
+        </span>
+        </p>
+        <p>
+            {{ form.tel.label }}<br>
+            {{ form.tel(size=32) }}
+            <span class="erreur">
+            {% for error in form.tel.errors %}
+                {{ error }}
+            {% endfor %}
+        </span>
+        </p>
+        <p>
+            {{ form.codesMatieres.label }}<br>
+            {{ form.codesMatieres }}
+            <span class="erreur">
+            {% for error in form.codesMatieres.errors %}
+                {{ error }}
+            {% endfor %}
+        </span>
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32) }}
+            <span class="erreur">
+            {% for error in form.password.errors %}
+                {{ error }}
+            {% endfor %}
+        </span>
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,171 @@
+body {
+    font: 1rem "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/*h3 {*/
+/*    font-size: 1.17rem;*/
+/*    font-weight: 700;*/
+/*    font-variant: small-caps;*/
+/*}*/
+
+.link {
+  color: #00B7FF;
+  text-decoration: none;
+  display: block;
+}
+
+.link:hover{
+  color: #608ea0;
+  font-weight: 600;
+}
+
+.erreur {
+    color: red;
+    font-size: 14px;
+    display: block;
+}
+
+form {
+  margin-bottom: 60px;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  padding: 5px;
+  width: 300px;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.small {
+  font-size: 0.8em;
+  color: gray;
+}
+
+.center{
+  text-align: center;
+}
+
+.carre-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.carre {
+  padding: 30px 32px;
+  width: 150px;
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 15px;
+  filter: drop-shadow(5px 1px 4px lightgrey);
+  transition: 500ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: content-box;
+}
+
+.carre:hover {
+  transform: translateY(-5px);
+  filter: drop-shadow(1px 1px 1px black);
+  transition: 250ms all;
+}
+
+.carre a {
+  padding: 70px 32px;
+}
+
+.accueil {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #d7dcec, #1cc88a);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.carte {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.carte h1 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section p {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+
+.primary {
+    background-color: #4e73df;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #2e59d9;
+}
+
+
+.secondary {
+    background-color: #858796;
+    color: white;
+}
+
+.secondary:hover {
+    background-color: #60616f;
+}
+
+.section-wrapper {
+    padding: 5px 50px;
+}
+
+.btn-app {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.25s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}

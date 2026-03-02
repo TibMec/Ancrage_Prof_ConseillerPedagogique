@@ -1,0 +1,61 @@
+tags:
+  - Enseignants
+
+summary: Lister tous les enseignants
+description: |
+  Cette route permet de lister tous les enseignants de la base de données pour le conseiller
+  authentifié via son JWT.
+  
+  Note:  Le test de la méthode marche seulement pour l'identity fournie dans le login (codée en dur dans le dao),
+  et ne montrera que les résultats pour le conseiller dont le courriel est jcho@csdm.com. 
+
+security:
+  - BearerAuth: []
+
+produces:
+  - application/json
+
+responses:
+  200:
+    description: Liste des professeurs récupérée avec succès
+    schema:
+      type: object
+      properties:
+        professeurs:
+          type: array
+          items:
+            type: object
+            properties:
+              nom:
+                type: string
+                example: Tremblay
+              prenom:
+                type: string
+                example: Julie
+              courriel:
+                type: string
+                example: julie.tremblay@csdm.com
+              ecoles:
+                type: array
+                items:
+                  type: string
+                example:
+                  - CSDM
+                  - École secondaire Montréal
+              codesMatieres:
+                type: array
+                items:
+                  type: string
+                example:
+                  - 101-101
+                  - 203-405
+              dateCreation:
+                type: string
+                format: date-time
+                example: "2026-03-01T19:30:00"
+
+  401:
+    description: Token JWT manquant ou invalide
+
+  500:
+    description: Erreur serveur

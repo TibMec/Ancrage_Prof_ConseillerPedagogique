@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="mt-2 d-flex justify-content-around">
+    <a href="/index">Accueil</a><br>
+    <a href="/profil-prof">Mon profil</a><br>
+    <a href="/logout">Se déconnecter</a><br>
+</div>
+<hr>
+<div class="section-wrapper">
+    <h1 class="my-4">Vos matières (codes)</h1>
+    <ul>
+        {% for code in liste_conseillers["codesMatieres"] %}
+        <li>{{code}} </li>
+        {% endfor %}
+    </ul>
+    <h1 class="my-4">Vos conseillers pour ces matières</h1>
+    <table class="table table-striped table-hover table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Courriel</th>
+            <th>Tel</th>
+            <th>Codes Matières</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for cp in liste_conseillers["conseillers"] %}
+        <tr>
+            <td>{{ cp.nom }}</td>
+            <td>{{ cp.prenom }}</td>
+            <td>{{ cp.courriel }}</td>
+            <td>{{ cp.tel }}</td>
+            <td>
+                {% for code in cp.codesMatieres %}
+                {{ code }}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

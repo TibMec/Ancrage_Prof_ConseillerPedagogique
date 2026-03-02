@@ -1,0 +1,39 @@
+### GET tous les profs
+GET http://127.0.0.1:5600/v1/tibinc/professeurs
+Accept: application/json
+
+### GET prof par email
+GET http://127.0.0.1:5600/v1/tibinc/professeurs/jcho@csdm.com
+Accept: application/json
+
+### POST créer prof
+POST http://127.0.0.1:5600/v1/tibinc/professeurs
+Content-Type: application/json
+
+{
+  "nom": "Bradburry",
+  "prenom": "Ray",
+  "courriel": "rbrad@sf.ca",
+  "ecoles": ["Los Angeles High"],
+  "codesMatieres": ["SFLIT101"]
+}
+
+### DELETE supprimer prof
+DELETE http://127.0.0.1:5600/v1/tibinc/professeurs/jean@ecole.ca
+Content-Type: application/json
+
+### PUT mettre à jour prof
+PUT http://127.0.0.1:5600/v1/tibinc/professeurs/jdup@courriel.com
+Content-Type: application/json
+
+{
+  "nom": "Dupdup",
+  "prenom": "Jouean",
+  "courriel": "jdup@courriel.com",
+  "ecoles": ["Pearson"],
+  "codesMatieres": ["123-123"]
+}
+
+### LINK lier prof à son conseiller
+GET http://127.0.0.1:5600/v1/tibinc/professeurs/lierConseiller?courriel=jcho@csdm.com
+Content-Type: application/json
