@@ -1,6 +1,8 @@
 import requests
 from flask import Flask, jsonify, request
+import os
 
+API_DAO = os.getenv("API_DAO", "http://127.0.0.1:5600")
 app = Flask(__name__)
 
 def get_token():
@@ -13,7 +15,7 @@ def tous_enseignants():
     token = get_token()
     if not token:
         return jsonify({"erreur": "Token manquant"}), 401
-    url = f'http://127.0.0.1:5600/v1/tibinc/professeurs-dao'
+    url = f'{API_DAO}/v1/tibinc/professeurs-dao'
     reponse = requests.get(url,headers={"Authorization": token})
     print("STATUS:", reponse.status_code)
     print("TEXT:", reponse.text)
@@ -25,7 +27,7 @@ def creer_conseiller( ):
     if not token:
         return jsonify({"erreur": "Token manquant"}), 401
     data = request.get_json()
-    url = 'http://127.0.0.1:5600/v1/tibinc/conseillers-dao'
+    url = f'{API_DAO}/v1/tibinc/conseillers-dao'
     reponse = requests.post(url, json=data,headers={"Authorization": token})
     return jsonify(reponse.json()), reponse.status_code
 
@@ -35,7 +37,7 @@ def mise_a_jour_conseiller(email):
     if not token:
         return jsonify({"erreur": "Token manquant"}), 401
     data = request.get_json()
-    url = f'http://127.0.0.1:5600/v1/tibinc/conseillers-dao/{email}'
+    url = f'{API_DAO}/v1/tibinc/conseillers-dao/{email}'
     reponse = requests.put(url, json=data,headers={"Authorization": token})
     return jsonify(reponse.json()), reponse.status_code
 
@@ -44,7 +46,7 @@ def supprimer_conseiller(email):
     token = get_token()
     if not token:
         return jsonify({"erreur": "Token manquant"}), 401
-    url = f'http://127.0.0.1:5600/v1/tibinc/conseillers-dao/{email}'
+    url = f'{API_DAO}/v1/tibinc/conseillers-dao/{email}'
     reponse = requests.delete(url,headers={"Authorization": token})
     return jsonify(reponse.json()), reponse.status_code
 

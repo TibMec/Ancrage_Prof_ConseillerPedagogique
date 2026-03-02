@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+
+  dao:
+    build: ./Service_DAO
+    container_name: dao
+    ports:
+      - "5600:5600"
+
+  auth:
+    build: ./Service_auth
+    container_name: auth
+    ports:
+      - "5100:5100"
+
+  prof:
+    build: ./ServiceProf
+    container_name: prof
+    ports:
+      - "5700:5700"
+    environment:
+      API_DAO: http://dao:5600
+
+  conseiller:
+    build: ./ServiceConseiller
+    container_name: conseiller
+    ports:
+      - "5900:5900"
+    environment:
+      API_DAO: http://dao:5600
+
+  client:
+    build: ./Client_Prof_CP
+    container_name: client
+    ports:
+      - "5000:5000"
+    environment:
+      API_PROF: http://prof:5700
+      API_CP: http://conseiller:5900
+      API_AUTH: http://auth:5100

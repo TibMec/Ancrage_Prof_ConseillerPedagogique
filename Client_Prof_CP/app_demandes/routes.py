@@ -6,6 +6,11 @@ from app_demandes.config import Config
 from flask import flash, session
 import requests
 
+import os
+
+API_PROF = os.getenv("API_PROF", "http://127.0.0.1:5700")
+API_CP = os.getenv("API_CP", "http://127.0.0.1:5900")
+API_AUTH = os.getenv("API_AUTH", "http://127.0.0.1:5100")
 app = Flask(__name__)
 app.config.from_object(Config)
 
@@ -77,7 +82,7 @@ def nouveau_prof():
             "password": prof_form.password.data,
         }
 
-        url = "http://127.0.0.1:5700/v1/enseignants"
+        url = f"{API_PROF}/v1/enseignants"
         reponse = requests.post(url, json=data, headers=api_headers())
 
         # DEBUG important
@@ -113,7 +118,7 @@ def mes_conseillers():
         return redirect("/login-prof")
     if session["role"] != "prof":
         return "Accès refusé", 403
-    url = f'http://127.0.0.1:5700/v1/conseillers-affilies'
+    url = f'{API_PROF}/v1/conseillers-affilies'
     reponse = requests.get(url, headers=api_headers())
 
     print("STATUS:", reponse.status_code)
@@ -157,7 +162,7 @@ def nouveau_conseiller():
             "codesMatieres": cp_form.codesMatieres.data,
             "password": cp_form.password.data,
         }
-        url = "http://127.0.0.1:5900/v1/conseillers"
+        url = f"{API_CP}/v1/conseillers"
         reponse = requests.post(url, json=data, headers=api_headers())
 
         flash("Conseiller ajouté depuis formulaire")
@@ -187,7 +192,7 @@ def maj_conseiller():
             "codesMatieres": cp_form.codesMatieres.data,
             "password": cp_form.password.data,
         }
-        url = f"http://127.0.0.1:5900/v1/conseillers/{courriel}"
+        url = f"{API_CP}/v1/conseillers/{courriel}"
         reponse = requests.put(url, json=data, headers=api_headers())
 
         flash("Conseiller modifié")
@@ -197,7 +202,7 @@ def maj_conseiller():
 
 @app.route('/liste-enseignants',methods=['GET'])
 def liste_enseignants():
-    url = f'http://127.0.0.1:5900/v1/enseignants'
+    url = f'{API_CP}/v1/enseignants'
     reponse = requests.get(url, headers=api_headers())
     data = reponse.json()
     print(data)
@@ -213,7 +218,7 @@ def login_prof():
 
     if form.validate_on_submit():
         res = requests.post(
-            "http://127.0.0.1:5100/v1/tibinc/login-prof",
+            f"{API_AUTH}/v1/tibinc/login-prof",
             json={
                 "courriel": form.courriel.data,
                 "password": form.password.data
@@ -248,7 +253,7 @@ def login_cp():
 
     if form.validate_on_submit():
         res = requests.post(
-            "http://127.0.0.1:5100/v1/tibinc/login-cp",
+            f"{API_AUTH}/v1/tibinc/login-cp",
             json={
                 "courriel": form.courriel.data,
                 "password": form.password.data
