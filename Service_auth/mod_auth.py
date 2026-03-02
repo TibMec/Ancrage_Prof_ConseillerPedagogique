@@ -1,10 +1,8 @@
 from datetime import timedelta
 
 from flask import Flask, jsonify, request
-from flask_jwt_extended import JWTManager
+from flask_jwt_extended import JWTManager, create_access_token
 from pymongo import MongoClient
-from flask_jwt_extended import create_access_token
-from mod_modele_pydantic import Prof, CP
 
 app = Flask(__name__)
 
@@ -73,4 +71,4 @@ def login_cp():
     }), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5100)
+    app.run(host="0.0.0.0",debug=True, port=5100)

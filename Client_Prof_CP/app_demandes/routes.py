@@ -54,12 +54,6 @@ def profil_prof():
 
 @app.route('/nouveau-prof', methods=['GET', 'POST'])
 def nouveau_prof():
-    if "role" not in session:
-        return redirect("/login-prof")
-
-    if session["role"] != "prof":
-        return "Accès refusé", 403
-
     prof_form = NouveauProfForm()
 
     prof_form.ecoles.choices = [
@@ -150,11 +144,6 @@ def profil_cp():
                            title='Profil conseiller pédagogique',)
 @app.route('/nouveau-conseiller',methods=['GET','POST'])
 def nouveau_conseiller():
-    if "role" not in session:
-        return redirect("/login-cp")
-
-    if session["role"] != "cp":
-        return "Accès refusé", 403
     cp_form = NouveauConseillerForm()
     print("email dans session, cote client ",session.get('courriel'))
     cp_form.codesMatieres.choices = codes

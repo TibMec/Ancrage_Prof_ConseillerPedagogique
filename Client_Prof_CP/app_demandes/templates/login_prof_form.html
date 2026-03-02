@@ -1,18 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="section-wrapper">
-    <h1>Authentification</h1>
-    <form action="/login-prof" method="post" novalidate>
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.courriel.label }}<br>
-            {{ form.courriel(size=25) }}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=25) }}
-        </p>
-        <p>{{ form.submit() }}</p>
-    </form>
-</div>
+        <div class="container mt-5">
+            <div class="col-sm-6">
+                <div class="card text-center h-100">
+                    <div class="card-header">
+                        <h3>Authentification</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/login-prof" method="post" novalidate>
+                            {{ form.hidden_tag() }}
+                            <p>
+                                {{ form.courriel.label }}<br>
+                                {{ form.courriel(size=25) }}
+                            </p>
+                            <p>
+                                {{ form.password.label }}<br>
+                                {{ form.password(size=25) }}
+                            </p>
+                            {{ form.submit() }}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
